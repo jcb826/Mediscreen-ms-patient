@@ -1,8 +1,4 @@
 package Mediscreenmspatient.controller;
-
-
-
-
 import Mediscreenmspatient.model.Patient;
 import Mediscreenmspatient.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +8,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/patient")
+@RequestMapping("patient")
 public class PatientController {
 
     @Autowired
