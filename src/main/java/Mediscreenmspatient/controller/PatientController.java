@@ -31,6 +31,7 @@ public class PatientController {
         public void deletePatient(@RequestParam(name = "id") Integer id) {
             patientService.deletePatient(id);
         }
+
         @GetMapping("/getAll")
         public List<Patient> patientsgetAllPatients() {
             return patientService.findAllPatients();
