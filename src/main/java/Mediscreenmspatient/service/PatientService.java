@@ -35,9 +35,9 @@ public class PatientService {
         return patientRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid patient Id:" + id));
     }
 
-    public void updatePatient(Patient patient, Integer id) {
+    public Patient updatePatient(Patient patient, Integer id) {
         patient.setId(id);
-        patientRepository.save(patient);
+       return patientRepository.save(patient);
     }
     public void deletePatient(Integer id){
         Patient patient = patientRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Invalid patient Id:" + id));
