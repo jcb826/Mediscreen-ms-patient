@@ -12,10 +12,10 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PATIENT_SEQ")
     @SequenceGenerator(name = "PATIENT_SEQ", sequenceName = "PATIENT_SEQ")
     private Integer id;
-    private String family;
-    private String given;
-    private LocalDate dob;
-    private String sex;
+    private String firstName;
+    private String lastName;
+    private LocalDate birthday;
+    private String gender;
     private String address;
     private String phone;
 
@@ -25,12 +25,12 @@ public class Patient {
 
     }
 
-    public Patient(Integer id, String family, String given, LocalDate dob, String sex, String address, String phone) {
+    public Patient(Integer id, String firstName, String lastName, LocalDate birthday, String gender, String address, String phone) {
         this.id = id;
-        this.family = family;
-        this.given = given;
-        this.dob = dob;
-        this.sex = sex;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.gender = gender;
         this.address = address;
         this.phone = phone;
     }
@@ -43,36 +43,36 @@ public class Patient {
         this.id = id;
     }
 
-    public String getFamily() {
-        return family;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFamily(String family) {
-        this.family = family;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getGiven() {
-        return given;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setGiven(String given) {
-        this.given = given;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public LocalDate getDob() {
-        return dob;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getAddress() {
